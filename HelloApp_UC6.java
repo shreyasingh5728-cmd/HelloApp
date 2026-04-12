@@ -1,0 +1,30 @@
+public class HelloApp_UC6 {
+
+
+    public static void main(String[] args) {
+
+        // Check if no arguments are provided
+        if (args.length == 0) {
+            System.out.println("Hello, World!");
+            return;
+        }
+
+        // Use StringBuilder to construct names
+        StringBuilder nameBuilder = new StringBuilder();
+
+        // Enhanced for loop to append names with delimiter
+        for (String name : args) {
+            nameBuilder.append(name).append(", ");
+        }
+
+        // Remove trailing ", " using substring
+        String names = "";
+        if (nameBuilder.length() > 0) {
+            names = nameBuilder.substring(0, nameBuilder.length() - 2);
+        }
+
+        // Print final greeting
+        System.out.println("Hello, " + names + "!");
+    }
+}
+    
